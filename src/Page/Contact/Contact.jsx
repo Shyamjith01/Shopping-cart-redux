@@ -1,7 +1,5 @@
-import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Container } from "@mui/material";
 import Header from "../../Components/Header/Header";
-import TextField from "@mui/material/TextField";
 import "./contact.scss";
 
 const Contact = () => {

@@ -8,7 +8,7 @@ import {
   getTotal,
   removeCartItem,
   updateQuantity,
-} from "../../Components/Redux/cartSlice";
+} from "../../Redux/cartSlice";
 import { useEffect } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 
@@ -77,7 +77,7 @@ const Cart = () => {
                 </div>
               </div>
               <div className="right">
-                <button style={{background:'none'}} onClick={()=>{handleRemoveItem(data)}}>
+                <button style={{background:'none',cursor:'pointer'}} onClick={()=>{handleRemoveItem(data)}}>
                   <DeleteIcon color="error" />
                 </button>
               </div>
@@ -85,7 +85,7 @@ const Cart = () => {
           );
         })}
         {cart.cartItems.length == 0 ? (
-          <div> No Item found </div>
+          <div className="no-cart"> No Item found </div>
         ) : (
           <Grid container className="footer-checkout">
             <Grid item xs={12} lg={4} md={3} className="checkout">

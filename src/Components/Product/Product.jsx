@@ -3,7 +3,7 @@ import "./product.scss";
 import shoe1 from "../../assets/products/shoe1.png";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/cartSlice";
+import { addToCart } from "../../Redux/cartSlice";
 import {toast } from 'react-toastify';
 
 const Product = (props) => {

@@ -18,7 +18,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const pages = [{name:"Home",url:"/"},{name:"Shoes",url:'/products/shoes'}, {name:"Backpack",url:'/products/bag'},{name:"Contact",url:'/contact'}];
+const pages = [
+  { name: "Home", url: "/" },
+  { name: "Shoes", url: "/products/shoes" },
+  { name: "Backpack", url: "/products/bag" },
+  { name: "Contact", url: "/contact" },
+];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,13 +34,9 @@ function Header() {
     setAnchorElNav(null);
   };
 
-  const value = useSelector((state)=>{
-    console.log(state.cart.cartItems.length ,"Staaateee "); 
+  const value = useSelector((state) => {
     return state.cart.cartItems;
   });
-
-  console.log(value,"Valuue");
-
   return (
     <AppBar position="fixed">
       <Container
@@ -80,18 +81,28 @@ function Header() {
                   display: { xs: "block", md: "none" },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem href={page.url} key={page.name} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.name}</Typography>
-                  </MenuItem>
+                {pages.map((page,i) => (
+                  <Link to={page.url} key={i}>
+                    <MenuItem key={page.name}>
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </MenuItem>
+                  </Link>
                 ))}
               </Menu>
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              <Button color="inherit" href="/">Home</Button>
-              <Button color="inherit" href="/products/shoes">Shoes</Button>
-              <Button color="inherit" href="/products/bag">Backpack</Button>
-              <Button color="inherit" href="/contact-us">Contact</Button>
+              <Button color="inherit" href="/">
+                Home
+              </Button>
+              <Button color="inherit" href="/products/shoes">
+                Shoes
+              </Button>
+              <Button color="inherit" href="/products/bag">
+                Backpack
+              </Button>
+              <Button color="inherit" href="/contact-us">
+                Contact
+              </Button>
             </Box>
           </div>
           <div className="right">
