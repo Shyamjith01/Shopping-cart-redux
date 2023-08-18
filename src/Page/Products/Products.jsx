@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Header from '../../Components/Header/Header';
 import { Container, Grid } from "@mui/material";
 import { useParams } from 'react-router-dom';
@@ -7,10 +6,7 @@ import Product from '../../Components/Product/Product';
 const Products = () => {
 
   const {product} = useParams();
-
-  useEffect(()=>{
-    console.log(product,"routte");
-  },[])
+ 
   return (
     <div>
         <Header />

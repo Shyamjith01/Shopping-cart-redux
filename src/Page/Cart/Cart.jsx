@@ -11,30 +11,39 @@ import {
 } from "../../Redux/cartSlice";
 import { useEffect } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const cart = useSelector((state) => {
-    console.log(state.cart, "Staaateee2344 ");
     return state.cart;
   });
 
   useEffect(() => {
     dispatch(getTotal());
   }, [cart]);
-
-  console.log(cart, "Cartitem1245");
-
+ 
   const dispatch = useDispatch();
 
   const handleRemoveItem = (product) => {
     dispatch(removeCartItem(product));
   };
 
-  const handleQuantityChange = (product, type) => {
-    console.log(product, "proooo");
+  const handleCheckout = () =>{
+    toast.success("Order placed", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    })
+  }
+
+  const handleQuantityChange = (product, type) => { 
     dispatch(updateQuantity({ type: type, product: product }));
   };
-  console.log(cart, "cart items");
   return (
     <div>
       <Header />
@@ -94,7 +103,7 @@ const Cart = () => {
                 <span>${cart.cartTotalAmount}</span>
               </div>
               <div>
-                <button>Check out</button>
+                <button style={{cursor:'pointer'}} onClick={handleCheckout}>Check out</button>
               </div>
             </Grid>
           </Grid>

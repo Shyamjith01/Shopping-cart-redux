@@ -15,7 +15,6 @@ const cartSlice = createSlice({
             if (itemIndex >= 0) {
                 state.cartItems[itemIndex].productQuantity += 1;
             } else {
-                console.log("entered right");
                 const tempProduct = { ...action.payload, productQuantity: 1 };
                 state.cartItems.push(tempProduct);
             }
@@ -28,7 +27,6 @@ const cartSlice = createSlice({
             localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
         },
         updateQuantity(state, action) {
-            console.log(action, "entered store");
             const itemIndex = state.cartItems.findIndex((item) => item.id == action.payload.product.id);
             switch (action.payload.type) {
                 case 'increment':

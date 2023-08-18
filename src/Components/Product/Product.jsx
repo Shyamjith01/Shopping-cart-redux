@@ -1,20 +1,13 @@
 /* eslint-disable react/prop-types */
 import "./product.scss";
-import shoe1 from "../../assets/products/shoe1.png";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../Redux/cartSlice";
 import {toast } from 'react-toastify';
 
 const Product = (props) => {
-  useEffect(() => {
-    console.log(shoe1,"ssisiie ");
-    console.log(props.product,"produuuddd");
-  }, []);
   const dispatch = useDispatch();
 
   const handleCart = (product) =>{
-    console.log(product,"cart");
     dispatch(addToCart(product));
     toast.success("Product added", {
       position: "bottom-right",

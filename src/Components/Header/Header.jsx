@@ -22,7 +22,7 @@ const pages = [
   { name: "Home", url: "/" },
   { name: "Shoes", url: "/products/shoes" },
   { name: "Backpack", url: "/products/bag" },
-  { name: "Contact", url: "/contact" },
+  { name: "Contact", url: "/contact-us" },
 ];
 
 function Header() {

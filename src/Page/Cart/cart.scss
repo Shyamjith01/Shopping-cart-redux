@@ -29,6 +29,7 @@
                 display: flex;
                 justify-content: space-between;
                 width: fit-content;
+                cursor: pointer;
                 div{
                     border: 1px solid; 
                     padding: 4px 17px;
@@ -91,6 +92,11 @@
                 width: auto;
             }
         }
+        .right{
+            button{
+                padding: 10px 0 25px 0;
+            }
+        }
     }
     .header{
         width: 100%;
@@ -98,4 +104,5 @@
     .no-cart{
         width: 100%;
     }
+
 }

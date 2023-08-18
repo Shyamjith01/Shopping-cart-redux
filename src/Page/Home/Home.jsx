@@ -6,20 +6,8 @@ import Product from "../../Components/Product/Product";
 import "./home.scss";
 import Footer from "../../Components/Footer/Footer";
 import { products } from "../../dummy-data/Products";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
 
 const Home = () => {
-  useEffect(() => {
-    console.log(products, "products");
-  }, []);
-
-  const value = useSelector((state)=>{
-    console.log(state.cart.cartItems ,"Staaateee ");
-  })
-
-  console.log(value,"vallluuueee");
-
   return (
     <>
       <Header />
