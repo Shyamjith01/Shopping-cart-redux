@@ -1,0 +1,92 @@
+.cart-product{
+    width: 80%;
+    height: 8rem;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between; 
+    .left{
+        display: flex;
+        .pro-img{
+            width: 10rem;
+            display: flex;
+            justify-content: center;
+            height: 8rem;
+            border: 1px solid #CCCCCC;
+            img{
+                width: 7rem;
+                object-fit: contain;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 1rem;
+            .count{ 
+                display: flex;
+                justify-content: space-between;
+                width: fit-content;
+                div{
+                    border: 1px solid; 
+                    padding: 4px 17px;
+                    display: flex;
+                }
+            }
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        margin: 1rem;
+        button{
+            padding: 10px 23px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 6px; 
+        }
+    }
+}
+.header{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footer-checkout{
+    width: 80% !important;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: end;
+    margin-top: 1.5rem;
+    .row{
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+    button{
+        background: black;
+        width: 100%;
+        padding: 10px;
+        color: white;
+        border-radius: 8px;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cart-product{
+        width: 100%;
+        .left{
+            .pro-img{
+                width: auto;
+            }
+        }
+    }
+    .header{
+        width: 100%;
+    }
+}

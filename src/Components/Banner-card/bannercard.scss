@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;600;900&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap');
+
+.banner-card{
+    width: auto;
+    height: 3rem;
+    font-family: 'roboto';
+    color: white;
+    cursor: pointer;
+    .proImg{
+        img{
+            width: 4rem;
+            height: 4rem;
+            object-fit: contain;
+        }
+    }
+} 
+@media screen and (max-width:600px) {
+    .banner-card{
+        margin-bottom: 0 !important;
+        margin-top: 1px !important;
+    }
+}

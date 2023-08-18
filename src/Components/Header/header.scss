@@ -1,0 +1,41 @@
+header{
+    height:5rem;
+    background:white !important;
+    color:black;
+    .header_logo{
+        img{
+            width:10rem !important;
+        }
+    }
+
+    .left-header-btns{
+        button{
+            margin: 0 10px;
+        }
+    }
+
+    .center{
+        .active{
+            color:#3FB098;
+        }
+        button{
+            font-size: 12px;
+        }
+    }
+
+    .right{
+        background: #308DBD;
+        padding: 7px 10px 7px 6px;
+        border-radius: 53px;
+        display: flex;
+        img{
+            width: 1.3rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .header-contianer{
+        padding: 10px !important;
+    }
+}

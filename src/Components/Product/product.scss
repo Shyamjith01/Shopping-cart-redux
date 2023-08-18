@@ -1,0 +1,46 @@
+.product{
+    min-height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding-bottom: 1rem;
+    .pro_img{
+        width: auto;
+        img{
+            height: 18rem;
+            width: -webkit-fill-available;
+            object-fit: contain;
+        }
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px;
+        .name{
+            ont-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 85%;
+        }
+        .price{
+            font-weight: 500;
+            margin: 10px 0;
+        }
+        .desc{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 85%;
+        }
+        button{
+            padding: 10px 25px;
+            border-radius: 10px;
+            border: none;
+            background: black;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
